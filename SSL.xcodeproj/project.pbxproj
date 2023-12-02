@@ -10,9 +10,12 @@
 		BBA2BA922B1A525400274834 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BA912B1A525400274834 /* AppDelegate.swift */; };
 		BBA2BA942B1A525400274834 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BA932B1A525400274834 /* SceneDelegate.swift */; };
 		BBA2BA962B1A525400274834 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BA952B1A525400274834 /* ViewController.swift */; };
-		BBA2BA992B1A525400274834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2BA972B1A525400274834 /* Main.storyboard */; };
 		BBA2BA9B2B1A525500274834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBA2BA9A2B1A525500274834 /* Assets.xcassets */; };
 		BBA2BA9E2B1A525500274834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBA2BA9C2B1A525500274834 /* LaunchScreen.storyboard */; };
+		BBA2BAA72B1A533300274834 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BAA62B1A533300274834 /* NetworkManager.swift */; };
+		BBA2BAAD2B1A690400274834 /* appleCert.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBA2BAAC2B1A690400274834 /* appleCert.cer */; };
+		BBA2BAAF2B1AA8C300274834 /* stackOverflow.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBA2BAAE2B1AA8C300274834 /* stackOverflow.cer */; };
+		BBA2BAB12B1AD15800274834 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BAB02B1AD15800274834 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		BBA2BA912B1A525400274834 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBA2BA932B1A525400274834 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BBA2BA952B1A525400274834 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BBA2BA982B1A525400274834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBA2BA9A2B1A525500274834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBA2BA9D2B1A525500274834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBA2BA9F2B1A525500274834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBA2BAA62B1A533300274834 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BBA2BAAC2B1A690400274834 /* appleCert.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appleCert.cer; sourceTree = "<group>"; };
+		BBA2BAAE2B1AA8C300274834 /* stackOverflow.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stackOverflow.cer; sourceTree = "<group>"; };
+		BBA2BAB02B1AD15800274834 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		BBA2BA902B1A525400274834 /* SSL */ = {
 			isa = PBXGroup;
 			children = (
+				BBA2BAAA2B1A5C3400274834 /* Resources */,
+				BBA2BAA52B1A532400274834 /* Utilities */,
 				BBA2BA912B1A525400274834 /* AppDelegate.swift */,
 				BBA2BA932B1A525400274834 /* SceneDelegate.swift */,
 				BBA2BA952B1A525400274834 /* ViewController.swift */,
-				BBA2BA972B1A525400274834 /* Main.storyboard */,
 				BBA2BA9A2B1A525500274834 /* Assets.xcassets */,
 				BBA2BA9C2B1A525500274834 /* LaunchScreen.storyboard */,
 				BBA2BA9F2B1A525500274834 /* Info.plist */,
 			);
 			path = SSL;
+			sourceTree = "<group>";
+		};
+		BBA2BAA52B1A532400274834 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BBA2BAA62B1A533300274834 /* NetworkManager.swift */,
+				BBA2BAB02B1AD15800274834 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BBA2BAAA2B1A5C3400274834 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBA2BAAE2B1AA8C300274834 /* stackOverflow.cer */,
+				BBA2BAAC2B1A690400274834 /* appleCert.cer */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBA2BA9E2B1A525500274834 /* LaunchScreen.storyboard in Resources */,
+				BBA2BAAD2B1A690400274834 /* appleCert.cer in Resources */,
 				BBA2BA9B2B1A525500274834 /* Assets.xcassets in Resources */,
-				BBA2BA992B1A525400274834 /* Main.storyboard in Resources */,
+				BBA2BAAF2B1AA8C300274834 /* stackOverflow.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +166,15 @@
 			files = (
 				BBA2BA962B1A525400274834 /* ViewController.swift in Sources */,
 				BBA2BA922B1A525400274834 /* AppDelegate.swift in Sources */,
+				BBA2BAA72B1A533300274834 /* NetworkManager.swift in Sources */,
 				BBA2BA942B1A525400274834 /* SceneDelegate.swift in Sources */,
+				BBA2BAB12B1AD15800274834 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BBA2BA972B1A525400274834 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBA2BA982B1A525400274834 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BBA2BA9C2B1A525500274834 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +317,6 @@
 				INFOPLIST_FILE = SSL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +344,6 @@
 				INFOPLIST_FILE = SSL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
